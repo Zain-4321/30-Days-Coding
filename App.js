@@ -1,61 +1,41 @@
-//EVENTS TODAY TPIC WE LEARN EVENTS
-// const bttn=document.querySelector(".btn");
-// console.log(bttn);
-//Second Method to use Events
-// bttn.onmouseover=function (){
-//     console.log("Learn JavaScript");
+// try{
+//     console.log("try block you can error");
+//     // console.log(ZAIN)
 // }
-//Third Type We Apply The Event
-//ADD EVEVT & EREMOVE EVENT
-//1) ADD EVENT THERE ARE THREE ARGUMENT
-                     //event name   functions call back boolean by default is false
-// bttn.addEventListener("click",()=>{
-
-//     bttn.classList.add("btn1");
-// })
-
-//REMOVE
-// function click1(){
-//     console.log("Click 1")
+// catch(err){
+//     console.log(err.name);
+//     console.log(err.message);
+//     console.log("The Catch Method Will Catch the Error");
 // }
-// function click2(){
-//     console.log("Click 2")
+// finally{
+//     console.log("Finall The error is solve")
 // }
 
-// bttn.addEventListener("click",click1)
-// bttn.addEventListener("click",click2)
-// bttn.removeEventListener("click",click2)
+
+
+//-------CUSTOM ERROR -----------------------//
+
+const err=new Error("Required");
+err.name="ERROR";
+let name =prompt("Enter Your Name");
+try{
+    if(name===""){
+        throw err
+    }
+    console.log(name)
+}
+catch(e){
+    console.log(e.anme);
+    console.log(e.message)
+}
 
 
 
-//-------------part 2--------------------------------------//
-//-----------Event Flow------------
-// const OutEle=document.querySelector(".outer");
-// const BtnEle=document.querySelector(".btn");
-
-
-// OutEle.addEventListener("click",(e)=>{
-//     console.log("you click on div");
-//     e.stopPropagation()
-//     },true)
-
-
-// //false neechy se upper   
-// //true upper se neechy
-
-// BtnEle.addEventListener("click",(e)=>{
-// console.log("you click on button");
-// e.stopPropagation()
-// },true)
 
 
 
-//prevent 
 
 
-const GoogEle=document.getElementById("Google");
 
-GoogEle.addEventListener("click",(e)=>{
-    console.log("Click On GOOGLE BUTTON");
-    e.preventDefault()
-},false)
+
+
